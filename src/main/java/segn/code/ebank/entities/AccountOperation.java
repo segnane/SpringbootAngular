@@ -26,11 +26,16 @@ private double amount;
 private OperationType type;
 @ManyToOne
 private BankAccount bankAccount;
+private String description;
+
+
 public long getId() {
 	return id;
 }
 public void setId(long id) {
 	this.id = id;
+	
+	
 }
 public Date getOperationDate() {
 	return operationDate;
@@ -38,22 +43,39 @@ public Date getOperationDate() {
 public void setOperationDate(Date operationDate) {
 	this.operationDate = operationDate;
 }
+
+
+
 public double getAmount() {
 	return amount;
 }
 public void setAmount(double amount) {
 	this.amount = amount;
+	
+	
+	
 }
 public OperationType getType() {
 	return type;
 }
+
+
+
 public void setType(OperationType type) {
 	this.type = type;
 }
+
+
+
 public BankAccount getBankAccount() {
 	return bankAccount;
 }
+
+
 public void setBankAccount(BankAccount bankAccount) {
 	this.bankAccount = bankAccount;
+	
 }
+
+
 }

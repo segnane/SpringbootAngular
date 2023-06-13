@@ -2,6 +2,8 @@ package segn.code.ebank.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +22,7 @@ private long id;
 private String name;
 private String email;
 @OneToMany(mappedBy="customer")
+//@JsonProperty(access=JsonProperty.Access.WRITE_ONLY) //pour limiter la serialization sous forme de boucle avec les objets liees de facon bidirectionnelle
 private List<BankAccount> bankAccounts;
 public long getId() {
 	return id;
